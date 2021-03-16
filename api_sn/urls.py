@@ -5,6 +5,9 @@ from rest_framework_simplejwt.views import TokenRefreshView
 from .views import PostViewSet, CreateUserView, MyToken, EmotionViewSet, UserStatisticViewSet, AnalyticsViewSet
 
 
+# All urls in one place because it is test project
+# In real project best way is divide some urls
+# (for example: user processing, statistic processing, app processing)
 urlpatterns = [
 
     path('user/new/', CreateUserView.as_view(), name='user_create'),
