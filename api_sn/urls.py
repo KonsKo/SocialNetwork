@@ -10,7 +10,7 @@ from .views import PostViewSet, CreateUserView, MyToken, EmotionViewSet, UserSta
 # (for example: user processing, statistic processing, app processing)
 urlpatterns = [
 
-    path('user/new/', CreateUserView.as_view(), name='user_create'),
+    path('user/new/', CreateUserView.as_view(), name=' '),
     path('user/login/', MyToken.as_view(), name='user_login'),
     path('user/refresh/', TokenRefreshView.as_view(), name='user_refresh'),
 

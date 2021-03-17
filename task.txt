@@ -1,6 +1,4 @@
 1. Social Network
-Object of this task is to create a simple REST API. You can use one framework from this list (Django
-Rest Framework, Flask or FastAPI) and all libraries which you are prefer to use with this frameworks.
 Basic models:
 ● User
 ● Post (always made by a user)
