@@ -19,7 +19,7 @@ class UserSocial(models.Model):
 class Post(models.Model):
     user_by = models.ForeignKey(UserSocial, blank=False, null=False, on_delete=models.CASCADE,
                                 verbose_name='Post created by user')
-    title = models.CharField(max_length=32, blank=False, verbose_name='Post title')
+    title = models.CharField(max_length=64, blank=False, verbose_name='Post title')
     body = models.CharField(max_length=256, blank=False, verbose_name='Post body')
     created = models.DateTimeField(auto_now_add=True)
 

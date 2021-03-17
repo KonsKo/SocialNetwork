@@ -100,7 +100,7 @@ class SocialNetworkTestCase(APITestCase):
         response = self.client.get('/api/analytics/')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
-    def test_analytics_range_by_dates(self):
+    def test_analytics_range_by_dates_with_filters(self):
         self.user.is_staff = True
         self.user.save()
         
@@ -121,3 +121,8 @@ class SocialNetworkTestCase(APITestCase):
         self.assertEqual(response.data[1].get('quantity'), 2)
         self.assertEqual(response.data[0].get('quantity'), 1)
 
+        response = self.client.get('/api/analytics/?date_from=2021-03-15&date_to=2021-03-18')
+        self.assertEqual(len(response.data), 1)
+
+        response = self.client.get('/api/analytics/?date_from=2020-01-15&date_to=2020-01-18')
+        self.assertEqual(len(response.data), 0)
