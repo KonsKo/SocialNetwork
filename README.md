@@ -14,6 +14,7 @@ DRF app. Target: <a href='https://github.com/KonsKo/SocialNetwork/blob/master/ta
   <li>{auth}{admin} Particular user statistic (get last login and last request to service), <strong>get: /api/user/stat/{int:id}/</strong>.</li>
   <li>{auth}{admin} Analytics about 'like-dislike' process, <strong>get: /api/analytics/ </strong>. This point shows information about 'like-dislike' quantity by day. Filters are available: 'date_from', 'date_to', example: /api/analytics/?date_from=2021-02-02&date_to=2021-02-15.</li>
 </ul>
+<p>Bot is created for task. There are two files: 'settings.json' contains urls, 'config.json' contains bot configurations. </b>
 <p>All decisions for API made for particular task. There are comments in code.</p>
 <p>If someone has a questions or comments, please, let me know.</p>
 
