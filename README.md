@@ -1,5 +1,5 @@
 # SocialNetwork
-DRF app. Target: task.txt
+DRF app. Target: <a href='https://github.com/KonsKo/SocialNetwork/blob/master/task.txt'>task.txt</a>
 
 <h4>Instruction</h4>
 <p>App with <a href='https://jwt.io/introduction'>JWT</a> authentification. After user loged in you got two tokens (access and refresh). Steps with sign {auth}  require token. Also statistis points require {admin} permisions.</p>
