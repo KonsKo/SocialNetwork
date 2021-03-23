@@ -3,7 +3,7 @@ import pandas as pd
 import requests
 import json
 import random
-import time
+import datetime
 
 # load settings
 with open('settings.json', 'r') as settings_file:
@@ -32,7 +32,11 @@ df_users = pd.DataFrame(columns=['username', 'status', 'info'])
 df_posts = pd.DataFrame(columns=['username', 'post_name', 'status'])
 df_likes = pd.DataFrame(columns=['username', 'post_id', 'status'])
 
+# count time
+start_time = datetime.datetime.now()
+
 # main cycle
+print('running ...')
 for user in range(number_of_user):
 
     # create random user
@@ -43,6 +47,7 @@ for user in range(number_of_user):
     )
     data_user = {'username': username, 'password': password}
     response_create = requests.post(url_user_create, data=data_user)
+    print('User: {} has been created'.format(username))
 
     # write data about user to df
     df_users = df_users.append(
@@ -120,9 +125,12 @@ for user in range(number_of_user):
             ignore_index=True
         )
 
-    time.sleep(1)
+    #time.sleep(1)
+
 
 
 print(df_users)
 print(df_posts)
 print(df_likes)
+
+print('finish time', datetime.datetime.now() - start_time)
