@@ -81,6 +81,7 @@ for user in range(number_of_user):
         )
         data_post = {'title': post_title, 'body': post_body}
         response_post = requests.post(url_post_new, headers=headers, data=data_post)
+        print('post', post_title, response_post.status_code)
 
         # write info about post creation process
         df_posts = df_posts.append(
@@ -111,6 +112,7 @@ for user in range(number_of_user):
         url_to_emotion = r'{}{}/'.format(url_post_do, post_id)
         data_emotion = {'kind': 'like'}
         response_emotion = requests.post(url_to_emotion, headers=headers, data=data_emotion)
+        print('like',response_emotion.status_code)
 
         if response_emotion.status_code == 201:
             like_marker -= 1
