@@ -1,6 +1,6 @@
-{"url_user_create": "http://127.0.0.1:8000/api/user/new/",
-  "url_user_login": "http://127.0.0.1:8000/api/user/login/",
-  "url_post_new": "http://127.0.0.1:8000/api/post/new/",
-  "url_post_do": "http://127.0.0.1:8000/api/post/",
-  "url_post_all": "http://127.0.0.1:8000/api/post/all/"
+{"url_user_create": "http://0.0.0.0:8000/api/user/new/",
+  "url_user_login": "http://0.0.0.0:8000/api/user/login/",
+  "url_post_new": "http://0.0.0.0:8000/api/post/new/",
+  "url_post_do": "http://0.0.0.0:8000/api/post/",
+  "url_post_all": "http://0.0.0.0:8000/api/post/all/"
 }

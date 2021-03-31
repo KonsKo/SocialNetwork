@@ -67,7 +67,7 @@ async def get_posts_ids(session, headers):
 async def fetch_like(session, headers):
     
     #ids = await get_posts_ids(session, headers)
-    post_id = random.randint(4900, 4940)
+    post_id = random.randint(1, 100)
     url_like = r'{}{}/'.format(url_post_do, post_id)
     data_emotion = {'kind': 'like'}
     async with session.post(url_like, headers=headers, data=data_emotion) as response:
