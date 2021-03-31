@@ -1,6 +1,10 @@
 # SocialNetwork
 DRF app. Target: <a href='https://github.com/KonsKo/SocialNetwork/blob/master/task.txt'>task.txt</a>
 
+<h4>Installation</h4>
+<p>docker-compose up</p>
+<p><strong>! There are unnecessary requirements for run docker.</strong> They exist for bot running (marked them with $, remove them if do not need) </p>
+
 <h4>Instruction</h4>
 <p>App with <a href='https://jwt.io/introduction'>JWT</a> authentification. After user loged in you got two tokens (access and refresh). Steps with sign {auth}  require token. Also statistis points require {admin} permisions.</p>
 <ul>
@@ -14,8 +18,8 @@ DRF app. Target: <a href='https://github.com/KonsKo/SocialNetwork/blob/master/ta
   <li>{auth}{admin} Particular user statistic (get last login and last request to service), <strong>get: /api/user/stat/{int:id}/</strong>.</li>
   <li>{auth}{admin} Analytics about 'like-dislike' process, <strong>get: /api/analytics/ </strong>. This point shows information about 'like-dislike' quantity by day. Filters are available: 'date_from', 'date_to', example: /api/analytics/?date_from=2021-02-02&date_to=2021-02-15.</li>
 </ul>
-<h5>Updated*:</h5>
-<p>*Tried to procces <strong>asyncio</strong> and <strong>aiohttp</strong> for bot implementation</p>
+<h5>Bot:</h5>
+<p>There are two bots: regular with requests and async with <strong>asyncio</strong> and <strong>aiohttp</strong></p>
 <p>Bot is created for task. There are two files: 'settings.json' contains urls, 'config.json' contains bot configurations. </b>
 <p>All decisions for API made for particular task. There are comments in code.</p>
 <p>If someone has a questions or comments, please, let me know.</p>
