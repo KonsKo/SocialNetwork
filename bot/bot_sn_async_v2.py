@@ -65,9 +65,11 @@ async def get_posts_ids(session, headers):
 
 # 'like' processing, we wait until post creating process is ended
 async def fetch_like(session, headers):
-    
-    #ids = await get_posts_ids(session, headers)
-    post_id = random.randint(1, 100)
+    ids = await get_posts_ids(session, headers)
+    try:
+        post_id = random.choice(ids)
+    except:
+        post_id = random.randint(1, 100)
     url_like = r'{}{}/'.format(url_post_do, post_id)
     data_emotion = {'kind': 'like'}
     async with session.post(url_like, headers=headers, data=data_emotion) as response:
@@ -102,10 +104,8 @@ async def fetch_user_create(session, data_user, tasks_user_create):
         task2 = asyncio.ensure_future(fetch_user_log(session, data_user, tasks_user_create))
         tasks_user_create.append(task2)
 
-
 async def run():
     tasks_user_create = []
-
     async with ClientSession() as session:
         for i in range(number_of_user):
             data_user = create_random_user()
