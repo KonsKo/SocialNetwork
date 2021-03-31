@@ -2,7 +2,7 @@
 DRF app. Target: <a href='https://github.com/KonsKo/SocialNetwork/blob/master/task.txt'>task.txt</a>
 
 <h4>Installation</h4>
-<p>docker-compose up</p>
+<p>docker-compose up --build</p>
 <p><strong>! There are unnecessary requirements for run docker.</strong> They exist for bot running (marked them with #, remove them if do not need) </p>
 
 <h4>Instruction</h4>
