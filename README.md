@@ -3,7 +3,7 @@ DRF app. Target: <a href='https://github.com/KonsKo/SocialNetwork/blob/master/ta
 
 <h4>Installation</h4>
 <p>docker-compose up</p>
-<p><strong>! There are unnecessary requirements for run docker.</strong> They exist for bot running (marked them with $, remove them if do not need) </p>
+<p><strong>! There are unnecessary requirements for run docker.</strong> They exist for bot running (marked them with #, remove them if do not need) </p>
 
 <h4>Instruction</h4>
 <p>App with <a href='https://jwt.io/introduction'>JWT</a> authentification. After user loged in you got two tokens (access and refresh). Steps with sign {auth}  require token. Also statistis points require {admin} permisions.</p>
