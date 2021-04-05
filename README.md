@@ -2,7 +2,12 @@
 DRF app. Target: <a href='https://github.com/KonsKo/SocialNetwork/blob/master/task.txt'>task.txt</a>
 
 <h4>Installation</h4>
-<p>docker-compose up --build</p>
+<p>docker-compose -f docker-compose.prod.yml up -d --build</p>
+<p>docker-compose -f docker-compose.prod.yml exec web python manage.py migrate</p>
+<p>docker-compose -f docker-compose.prod.yml exec web python manage.py collectstatic</p>
+<p>docker-compose -f docker-compose.prod.yml up</p>
+<p>go to http://localhost:1337/< address ></p>
+<p>docker-compose down -v</p>
 <p><strong>! There are unnecessary requirements for run docker.</strong> They exist for bot running (marked them with #, remove them if do not need) </p>
 
 <h4>Instruction</h4>
