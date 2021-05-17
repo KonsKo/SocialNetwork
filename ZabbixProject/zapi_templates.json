@@ -1,0 +1,58 @@
+{
+  "data_host": {
+    "jsonrpc": "2.0",
+    "method": "host.get",
+    "params": {
+        "output": "extend",
+        "selectInterfaces": "extend",
+        "selectItems": "extend"
+    },
+    "id": 1
+  },
+
+  "data_events": {
+    "jsonrpc": "2.0",
+    "method": "event.get",
+    "params": {
+        "output": "extend",
+
+        "select_acknowledges": "extend",
+        "time_from": "1620594000"
+    },
+    "id": 1
+  },
+
+  "data_problems": {
+    "jsonrpc": "2.0",
+    "method": "problem.get",
+    "params": {
+        "output": "extend"
+    },
+    "id": 1
+  },
+
+  "data_triggers": {
+    "jsonrpc": "2.0",
+    "method": "trigger.get",
+    "params": {
+        "output": "extend",
+        "selectHosts": "extend"
+    },
+    "id": 1
+  },
+
+  "data_items": {
+    "jsonrpc": "2.0",
+    "method": "item.get",
+    "params": {
+        "output": "extend",
+        "hostids": "10361",
+        "search": {
+            "key_": "system"
+        },
+        "sortfield": "name"
+    },
+    "id": 1
+}
+
+}
